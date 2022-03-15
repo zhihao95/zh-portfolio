@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zh-portfolio/static/css/main.abd64e84.css",
+    "main.js": "/zh-portfolio/static/js/main.acaea574.js",
+    "index.html": "/zh-portfolio/index.html",
+    "main.abd64e84.css.map": "/zh-portfolio/static/css/main.abd64e84.css.map",
+    "main.acaea574.js.map": "/zh-portfolio/static/js/main.acaea574.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.acaea574.js"
+  ]
+}
