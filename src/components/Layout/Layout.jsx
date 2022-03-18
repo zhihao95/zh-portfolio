@@ -1,5 +1,6 @@
 import React from 'react'
 import Topbar from '../Topbar/Topbar'
+import BottomBar from '../BottomBar/BottomBar'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
@@ -7,6 +8,7 @@ const Layout = () => {
     <div>
         <Topbar />
         <Outlet />
+        <BottomBar /> 
     </div>
   )
 }

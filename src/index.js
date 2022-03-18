@@ -6,13 +6,13 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 
 const theme = createTheme({
-   palette: {
+  palette: {
     type: 'dark',
     primary: {
-      main: 'rgba(0,12,12,0.51)',
+      main: 'rgba(9,0,12,0.86)',
     },
     secondary: {
-      main: '#b900f5',
+      main: '#0b00f5',
     },
     text: {
       primary: '#ffffff',
@@ -21,7 +21,7 @@ const theme = createTheme({
       main: '#f43636',
     },
     background: {
-      default: '#303030',
+      default: 'black',
     },
   }
 });
