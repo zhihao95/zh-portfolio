@@ -20,7 +20,6 @@ const bannerStack = {
   alignItems: "center",
   justifyContent: "center",
   display: { xs: "flex", md : "flex" },
-  
   width: "100vh",
 };
 
@@ -31,7 +30,7 @@ const Home = () => {
         <Box sx={bannerStack}>
           <Stack spacing={3.5}  >
             <Typography variant="h5">Hi there, I'm</Typography>
-            <Typography variant="h1">Ting Zhi Hao</Typography>
+            <Typography variant="h2">Ting Zhi Hao</Typography>
             <Divider color="white" orientation="horizontal" flexItem />
             <Typography variant="h6">
               Software developer | Game Engine Programmer
