@@ -6,15 +6,24 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 
 const theme = createTheme({
-  palette: {
-    type: "dark",
+   palette: {
+    type: 'dark',
     primary: {
-      main: "#000c0c",
+      main: 'rgba(0,12,12,0.51)',
     },
     secondary: {
-      main: "#f50057",
+      main: '#b900f5',
     },
-  },
+    text: {
+      primary: '#ffffff',
+    },
+    error: {
+      main: '#f43636',
+    },
+    background: {
+      default: '#303030',
+    },
+  }
 });
 
 ReactDOM.render(

@@ -1,39 +1,47 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import { Toolbar, Box, Typography, Button, Container} from "@mui/material";
+import { Toolbar, Box, Typography, Button, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import { styled } from "@mui/system";
 
-const pages = ["portfolio", "about"];
+const pages = ["about", "portfolio", "projects"];
 
-const TopAppBar = styled(AppBar)({
-  marginBottom: '10px',
-  spacing: '2',
-  position: 'static'
-});
+const TopAppBar = {
+  spacing: "4",
+  position: "static",
+};
 
+const NavElementBox = {
+  display: "flex" 
+};
 
 const Topbar = () => {
   return (
-    <TopAppBar>
+    <AppBar sx={TopAppBar}>
       <Container maxWidth="l">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Home
-        </Typography>
-        <Box component={Link} to="/about" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+        <Toolbar>
+          <Button component={Link}
+                to={`/`}
+                key="Home"
+                sx={{ my: 2, color: "white", display: "block", flexGrow: 1 }}>
+            <Typography variant="h6" component="div">
+              Home
+            </Typography>
+          </Button>
+          <Box sx={NavElementBox}>
             {pages.map((page) => (
               <Button
+                component={Link}
+                to={`/${page}`}
                 key={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-      </Toolbar>
+        </Toolbar>
       </Container>
-    </TopAppBar>
+    </AppBar>
   );
 };
 
