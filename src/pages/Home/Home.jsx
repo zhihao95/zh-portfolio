@@ -17,7 +17,7 @@ const bannerContainer = {
   alignItems: "center",
   justifyContent: "center",
   display: "flex",
-  height: { xs: "100vh", md: "75vh" },
+  height: { xs: "75vh", md: "55vh" },
   overflow: "hidden",
   width: "100%",
 };
