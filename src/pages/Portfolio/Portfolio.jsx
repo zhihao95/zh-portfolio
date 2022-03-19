@@ -1,10 +1,15 @@
 import React from 'react'
 
-console.log("testing");
+import { Box } from "@mui/material"
+
+const portfolioBox = {
+    height : "100vh"
+  };
+
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <Box sx ={portfolioBox}>Portfolio WIP</Box>
   )
 }
 

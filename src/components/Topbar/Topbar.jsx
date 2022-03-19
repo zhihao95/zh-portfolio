@@ -3,47 +3,57 @@ import AppBar from "@mui/material/AppBar";
 import {
   Toolbar,
   Box,
-  Typography,
   Button,
-  Container,
   ButtonGroup,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { DRAWER_OPEN } from "../Actions/actions";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useDrawerOpenContext } from "../Contexts/Contexts";
 
-const pages = ["about", "portfolio", "projects"];
+const pages = ["home", "about", "portfolio", "projects"];
 
 const TopAppBar = {
   spacing: "4",
   position: "static",
+  width : "100%",
+  display: "flex",
 };
 
 const NavElementBox = {
   display: "flex",
+  marginLeft: "auto",
 };
 
+const ButtonStyle = { my: 2, color: "white", display: "block" };
+
 const Topbar = () => {
+  const { drawerOpen, dispatch } = useDrawerOpenContext();
+
   return (
     <AppBar sx={TopAppBar}>
-      <Container maxWidth="l">
         <Toolbar>
           <Button
-            component={Link}
-            to={`/`}
-            key="Home"
-            sx={{ my: 2, color: "white", display: "block", flexGrow: 1 }}
+            onClick={() =>
+              dispatch({ type: DRAWER_OPEN, payload: !drawerOpen })
+            }
+            key="Open"
+            sx={{ ...ButtonStyle }}
           >
-            <Typography variant="h6" component="div">
-              Home
-            </Typography>
+            <MenuIcon />
           </Button>
           <Box sx={NavElementBox}>
-            <ButtonGroup variant="text" color="secondary" aria-label="text button group">
+            <ButtonGroup
+              variant="text"
+              color="secondary"
+              aria-label="text button group"
+            >
               {pages.map((page) => (
                 <Button
                   component={Link}
                   to={`/${page}`}
                   key={page}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ ...ButtonStyle, right: 0 }}
                 >
                   {page}
                 </Button>
@@ -51,7 +61,6 @@ const Topbar = () => {
             </ButtonGroup>
           </Box>
         </Toolbar>
-      </Container>
     </AppBar>
   );
 };

@@ -112,7 +112,7 @@ const Home = () => {
             </Typography>
             <Typography sx={{ textAlign: "center" }} variant="h6">
               <Button variant="contained" color="success">
-                Contact Me
+                Contact Me (WIP)
               </Button>
             </Typography>
           </Stack>
@@ -123,7 +123,7 @@ const Home = () => {
           <Stack spacing={3.5}>
             <Typography variant="h4">Projects</Typography>
             <Divider color="white" orientation="horizontal" flexItem />
-            <ImageList cols={2} gap={10} rowHeight="100%">
+            <ImageList cols={2} gap={10} >
               {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                   <img src={item.img} alt={item.alt} />
