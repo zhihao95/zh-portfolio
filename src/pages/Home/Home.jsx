@@ -9,6 +9,8 @@ import {
   ImageList,
   ImageListItem,
 } from '@mui/material';
+import { DRAWER_OPEN } from '../../components/Actions/actions';
+import { useDrawerOpenContext } from '../../components/Contexts/Contexts';
 
 const bannerContainer = {
   // backgroundRepeat: "no-repeat",
@@ -99,6 +101,12 @@ const itemData = [
 ];
 
 function Home() {
+  const { dispatch } = useDrawerOpenContext();
+
+  const openDrawer = () => {
+    dispatch({ type: DRAWER_OPEN, payload: true });
+  };
+
   return (
     <Box>
       <Container maxWidth="100%" sx={bannerContainer}>
@@ -111,8 +119,12 @@ function Home() {
               Software developer | Game Engine Programmer
             </Typography>
             <Typography sx={{ textAlign: 'center' }} variant="h6">
-              <Button variant="contained" color="success">
-                Contact Me (WIP)
+              <Button
+                onClick={() => openDrawer()}
+                variant="contained"
+                color="success"
+              >
+                Contact Me
               </Button>
             </Typography>
           </Stack>

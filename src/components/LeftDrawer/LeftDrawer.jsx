@@ -61,10 +61,10 @@ function LeftDrawer() {
             <Email sx={{ minWidth: '50px' }} />
             {'  zhihao_ting@outlook.com'}
           </Typography>
-          <Button sx={buttonStyle}><LinkedIn /></Button>
-          <Button sx={buttonStyle}><GitHub /></Button>
-          <Button sx={buttonStyle}><Facebook /></Button>
-          <Button sx={buttonStyle}><Instagram /></Button>
+          <Button target="_blank" href="https://www.linkedin.com/in/zhihao-ting" sx={buttonStyle}><LinkedIn /></Button>
+          <Button target="_blank" href="https://github.com/zhihao95/zh-portfolio" sx={buttonStyle}><GitHub /></Button>
+          <Button target="_blank" href="https://www.facebook.com/zhihao.ting" sx={buttonStyle}><Facebook /></Button>
+          <Button target="_blank" href="https://www.instagram.com/zhi_haooo" sx={buttonStyle}><Instagram /></Button>
         </Stack>
       </Container>
     </Box>
