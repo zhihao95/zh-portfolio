@@ -16,6 +16,8 @@ import MyPhoto from "../../resources/images/MyPhoto.jpg";
 const LeftDrawer = () => {
   const { drawerOpen, dispatch } = useDrawerOpenContext();
 
+  const buttonStyle = { color: "white"};
+
   const drawerStyle = {
     bgcolor: "primary.main",
     justifyContent: "center",
@@ -49,16 +51,16 @@ const LeftDrawer = () => {
 
   const drawer = (
     <Box sx={drawerStyle}>
-      <Box onClick={toggleDrawer(false)} sx ={{position: "absolute", marginLeft : "83%"}}><Button><ArrowBackIos/></Button></Box>
+      <Box onClick={toggleDrawer(false)} sx ={{position: "absolute", marginLeft : "83%"}}><Button sx={buttonStyle}><ArrowBackIos/></Button></Box>
       <Container sx={drawerContainer}>
         <Stack spacing = {3} sx={{   display:"flex", alignItems : "center", flexWrap: 'wrap'}}>
         
           <Avatar src={MyPhoto} sx={avatarStyle} />
           <Typography  sx={{ display:"flex"}}><Email sx={{minWidth:"50px"}} />{"  zhihao_ting@outlook.com"}</Typography>
-          <Button><LinkedIn /></Button>
-          <Button><GitHub /></Button>
-          <Button><Facebook /></Button>
-          <Button><Instagram /></Button>
+          <Button sx={buttonStyle}><LinkedIn /></Button>
+          <Button sx={buttonStyle}><GitHub /></Button>
+          <Button sx={buttonStyle}><Facebook /></Button>
+          <Button sx={buttonStyle}><Instagram /></Button>
         </Stack>
       </Container>
     </Box>
