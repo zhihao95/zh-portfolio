@@ -1,11 +1,11 @@
-import React from "react";
-import { Box, Stack } from "@mui/material";
+import React from 'react';
+import { Box, Stack } from '@mui/material';
 
 const aboutBox = {
-  height : "100vh"
+  height: '100vh',
 };
 
-const About = () => {
+function About() {
   return (
     <Box sx={aboutBox}>
       <Stack>
@@ -15,6 +15,6 @@ const About = () => {
       </Stack>
     </Box>
   );
-};
+}
 
 export default About;

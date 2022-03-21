@@ -1,21 +1,23 @@
-import React from 'react'
-import {Box , Button, Stack, Typography} from "@mui/material"
+import React from 'react';
+import {
+  Box, Button, Stack, Typography,
+} from '@mui/material';
 
 const bottomBarBox = {
-    // display : "flex"
-}
+  // display : "flex"
+};
 
-const bottomBarButton = { my: 2, color: "white", display: "block" }
+const bottomBarButton = { my: 2, color: 'white', display: 'block' };
 
-const BottomBar = () => {
+function BottomBar() {
   return (
-    <Box bgcolor="primary.main" sx={bottomBarBox}> 
-        <Stack justifyContent="space-around" direction="row" alignItems="center" spacing={2}>
-            <Typography variant="body1">© Ting Zhi Hao</Typography>
-            <Button sx={bottomBarButton}>Contact</Button>
-        </Stack>
+    <Box bgcolor="primary.main" sx={bottomBarBox}>
+      <Stack justifyContent="space-around" direction="row" alignItems="center" spacing={2}>
+        <Typography variant="body1">© Ting Zhi Hao</Typography>
+        <Button sx={bottomBarButton}>Contact</Button>
+      </Stack>
     </Box>
-  )
+  );
 }
 
-export default BottomBar
+export default BottomBar;

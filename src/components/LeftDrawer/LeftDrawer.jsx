@@ -18,7 +18,7 @@ import MyPhoto from '../../resources/images/MyPhoto.jpg';
 function LeftDrawer() {
   const { drawerOpen, dispatch } = useDrawerOpenContext();
 
-  const buttonStyle = { color: "white"};
+  const buttonStyle = { color: 'white' };
 
   const drawerStyle = {
     bgcolor: 'primary.main',
@@ -53,12 +53,15 @@ function LeftDrawer() {
 
   const drawer = (
     <Box sx={drawerStyle}>
-      <Box onClick={toggleDrawer(false)} sx ={{position: "absolute", marginLeft : "83%"}}><Button sx={buttonStyle}><ArrowBackIos/></Button></Box>
+      <Box onClick={toggleDrawer(false)} sx={{ position: 'absolute', marginLeft: '83%' }}><Button sx={buttonStyle}><ArrowBackIos /></Button></Box>
       <Container sx={drawerContainer}>
         <Stack spacing={3} sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
 
           <Avatar src={MyPhoto} sx={avatarStyle} />
-          <Typography  sx={{ display:"flex"}}><Email sx={{minWidth:"50px"}} />{"  zhihao_ting@outlook.com"}</Typography>
+          <Typography sx={{ display: 'flex' }}>
+            <Email sx={{ minWidth: '50px' }} />
+            {'  zhihao_ting@outlook.com'}
+          </Typography>
           <Button sx={buttonStyle}><LinkedIn /></Button>
           <Button sx={buttonStyle}><GitHub /></Button>
           <Button sx={buttonStyle}><Facebook /></Button>

@@ -1,29 +1,27 @@
-import React from 'react'
-import Topbar from '../Topbar/Topbar'
-import BottomBar from '../BottomBar/BottomBar'
-import LeftDrawer from '../LeftDrawer/LeftDrawer'
-import { Outlet } from 'react-router-dom'
-import drawerReducer from '../Reducer/reducers'
-import { useReducer } from 'react'
-import DrawerOpenContext  from "../Contexts/Contexts.jsx"
+import React, { useReducer, useMemo } from 'react';
+import { Outlet } from 'react-router-dom';
+import Topbar from '../Topbar/Topbar';
+import BottomBar from '../BottomBar/BottomBar';
+import LeftDrawer from '../LeftDrawer/LeftDrawer';
+import drawerReducer from '../Reducer/reducers';
+import DrawerOpenContext from '../Contexts/Contexts';
 
-const Layout = () => {
+function Layout() {
+  const [drawerOpen, dispatch] = useReducer(drawerReducer, false);
 
-  const [drawerOpen, dispatch] =useReducer(drawerReducer, false);
-
-  const drawerOpenState = {
+  const drawerOpenState = useMemo(() => ({
     drawerOpen,
-    dispatch
-  };
+    dispatch,
+  }), []);
 
   return (
     <DrawerOpenContext.Provider value={drawerOpenState}>
-        <Topbar/>
-        <LeftDrawer />
-        <Outlet />
-        <BottomBar />
+      <Topbar />
+      <LeftDrawer />
+      <Outlet />
+      <BottomBar />
     </DrawerOpenContext.Provider>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

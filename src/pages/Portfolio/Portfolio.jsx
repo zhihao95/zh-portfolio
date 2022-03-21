@@ -1,16 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import { Box } from "@mui/material"
+import { Box } from '@mui/material';
 
 const portfolioBox = {
-    height : "100vh"
-  };
+  height: '100vh',
+};
 
-
-const Portfolio = () => {
+function Portfolio() {
   return (
-    <Box sx ={portfolioBox}>Portfolio WIP</Box>
-  )
+    <Box sx={portfolioBox}>Portfolio WIP</Box>
+  );
 }
 
-export default Portfolio
+export default Portfolio;

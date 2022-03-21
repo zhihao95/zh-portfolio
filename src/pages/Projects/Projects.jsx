@@ -1,14 +1,14 @@
-import React from 'react'
-import { Box } from "@mui/material"
+import React from 'react';
+import { Box } from '@mui/material';
 
 const projectBox = {
-    height : "100vh"
-  };
+  height: '100vh',
+};
 
-const Projects = () => {
+function Projects() {
   return (
     <Box sx={projectBox}>Projects WIP</Box>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
