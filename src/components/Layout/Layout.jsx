@@ -12,7 +12,7 @@ function Layout() {
   const drawerOpenState = useMemo(() => ({
     drawerOpen,
     dispatch,
-  }), []);
+  }));
 
   return (
     <DrawerOpenContext.Provider value={drawerOpenState}>

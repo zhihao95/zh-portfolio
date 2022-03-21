@@ -1,6 +1,6 @@
 import { DRAWER_OPEN } from '../Actions/actions';
 
-const drawerReducer = (action, state = {}) => {
+const drawerReducer = (state, action) => {
   switch (action.type) {
     case DRAWER_OPEN:
       return action.payload;

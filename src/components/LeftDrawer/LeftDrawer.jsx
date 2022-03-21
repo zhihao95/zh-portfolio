@@ -56,7 +56,6 @@ function LeftDrawer() {
       <Box onClick={toggleDrawer(false)} sx={{ position: 'absolute', marginLeft: '83%' }}><Button sx={buttonStyle}><ArrowBackIos /></Button></Box>
       <Container sx={drawerContainer}>
         <Stack spacing={3} sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-
           <Avatar src={MyPhoto} sx={avatarStyle} />
           <Typography sx={{ display: 'flex' }}>
             <Email sx={{ minWidth: '50px' }} />
