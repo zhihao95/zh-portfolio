@@ -19,7 +19,7 @@ function MediaCard({
           position: 'flex',
           top: 0,
           left: 0,
-          height: '50vh',
+          height: { xs: '30vh', sm: '60vh' },
           width: '100%',
         }}
       />
