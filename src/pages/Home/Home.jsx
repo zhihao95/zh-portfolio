@@ -6,11 +6,25 @@ import {
   Stack,
   Typography,
   Button,
-  ImageList,
   ImageListItem,
 } from '@mui/material';
+import { styled } from '@mui/system';
 import { DRAWER_OPEN } from '../../components/Actions/actions';
 import { useDrawerOpenContext } from '../../components/Contexts/Contexts';
+import MediaCard from './components/MediaCard/MediaCard';
+
+const ImageGalleryList = styled('ul')(({ theme }) => ({
+  display: 'grid',
+  padding: 0,
+  margin: theme.spacing(0, 4),
+  gap: 8,
+  [theme.breakpoints.up('sm')]: {
+    gridTemplateColumns: 'repeat(1, 1fr)',
+  },
+  [theme.breakpoints.up('md')]: {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
+}));
 
 const bannerContainer = {
   // backgroundRepeat: "no-repeat",
@@ -51,53 +65,24 @@ const imageListBox = {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: 'https://youtube.com/embed/oryZVKhr-6Y',
+    title: 'Shootjectory',
+    description: 'A turn based physics based strategy game where players attack enemies with projectiles that can manipulate their position and facing direction turning them against each other.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: 'https://youtube.com/embed/YLbtdo8Ag7A',
+    title: 'Spaceza Hut',
+    description: 'A 3D first person runner race against time game in which the player is required to deliver pizza in space with a limited amount of time. ',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: 'https://youtube.com/embed//PZkXb3WUJSI',
+    title: 'Hero Illapse',
+    description: 'A rogue like top down shooter where the main focus is on defeating randomly generated unique bosses and collecting randomized powerups from bosses. The objective of the game is to defeat all 4 bosses in a single playthrough by shooting enemies to defeat them and avoiding projectiles and or boss attacks. ',
   },
-  {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-  },
+  // {
+  //   img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+  //   title: 'My Portfolio',
+  // },
 ];
 
 function Home() {
@@ -135,13 +120,13 @@ function Home() {
           <Stack spacing={3.5}>
             <Typography variant="h4">Projects</Typography>
             <Divider color="white" orientation="horizontal" flexItem />
-            <ImageList cols={2} gap={10}>
+            <ImageGalleryList>
               {itemData.map((item) => (
                 <ImageListItem key={item.img}>
-                  <img src={item.img} alt={item.alt} />
+                  <MediaCard img={item.img} header={item.title} body={item.description} />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageGalleryList>
           </Stack>
         </Box>
       </Container>
